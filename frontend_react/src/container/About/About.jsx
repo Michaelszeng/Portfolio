@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { AppWrap } from '../../wrapper';
+import { AppWrap, MotionWrap } from '../../wrapper';
 
 import './About.scss';
 import { urlFor, client } from '../../client';  // import client.js so we can retrieve about section from sanity
 
-const abouts = [
-  // Static test data for abouts section
-  // { title: 'Engineer', description: 'I am a good engineer.', imgUrl: images.about01 },
-  // { title: 'Designer', description: 'I am a good designer.', imgUrl: images.about02 },
-  // { title: 'Programmer', description: 'I am a good programmer.', imgUrl: images.about03 },
-  // { title: 'Web Developer', description: 'I am a good web developer.', imgUrl: images.about04 }
-];
+// const abouts = [
+//   // Static test data for abouts section
+//   { title: 'Engineer', description: 'I am a good engineer.', imgUrl: images.about01 },
+//   { title: 'Designer', description: 'I am a good designer.', imgUrl: images.about02 },
+//   { title: 'Programmer', description: 'I am a good programmer.', imgUrl: images.about03 },
+//   { title: 'Web Developer', description: 'I am a good web developer.', imgUrl: images.about04 }
+// ];
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
@@ -42,4 +42,4 @@ const About = () => {
   )
 }
 
-export default AppWrap(About, 'about');
+export default AppWrap(MotionWrap(About, 'app__about'), 'about', 'app__whitebg');
