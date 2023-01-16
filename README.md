@@ -2,4 +2,9 @@
 
 To run server:
 - cd into ./frontend_react
-- run: >npm start
+- >npm start
+
+
+To run sanity backend:
+- cd into ./backend_sanity
+- >npm run dev
