@@ -1,4 +1,6 @@
+frontend_react/.env
 frontend_react/src/client.js
+frontend_react/node_modules
 backend_sanity/sanity.cli.js
 backend_sanity/sanity.config.js
 backend_sanity/portfolio/sanity.cli.js

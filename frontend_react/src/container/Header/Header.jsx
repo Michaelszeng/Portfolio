@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { images } from '../../constants';
+import { AppWrap } from '../../wrapper';
 
 import './Header.scss'
 
@@ -18,7 +19,7 @@ const Header = () => {
       <motion.div whileInView={{ x: [-100, 0], opacity: [0, 1] }} transition={{ duration: 2 }} className="app__header-info">  {/* Animation: moves from left to right 100px, opacity changes from clear to opaque, lasts for 2 seconds */}
         <div className="app__header-badge">
           <div className="badge-cmp app_flex">
-            <div class="wave">👋</div>
+            <div className="wave">👋</div>
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
               <h1 className="head-text">Michael</h1>
@@ -49,4 +50,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default AppWrap(Header, 'home');
